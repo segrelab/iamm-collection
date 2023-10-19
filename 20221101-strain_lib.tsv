@@ -1,0 +1,65 @@
+Location_Column	Location_Box	Location_BoxNo	BoxRow	TubeLabel	Strain_nickname	Name	Phylum	Class	Order	Family	Genus	Species	Strain	Other_Names	Source	Source_catalog_number	Note
+1	1	7000186747	A	sflavi_SMRYG (SMR4y)	Sflavi	Sphingorhabdus flavimaris	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingorhabdus	flavimaris	SMR4y	NA	Hans-Peter Grossart	NA	NA
+1	1	7000186747	B	camp	vcamp	Vibrio campbelli	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	campbelli	BB120	NA	ATCC	BAA-1116	NA
+1	1	7000186747	C	vnat	vnat	Vibrio natriegens	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	natriegens	111	Beneckea natriegens	ATCC	14048	NA
+1	1	7000186747	D	bermu	bermu	Pelagibaca bermudensis	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Pelagibaca	bermudensis	HTCC2601	Salipiger bermudensis	DSMZ	26914	NA
+1	1	7000186747	E	bs11	BS11	Alteromonas macleodii	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	macleodii	BS11	NA	Daniel Sher	NA	DSM 26494 from DSMZ
+1	1	7000186747	F	cordia (*kordia)	kordia	Kordia algicida	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Kordia	algicida	OT-1	NA	NITE	100336	NA
+1	1	7000186747	G	hot1a3	HOT1A3	Alteromonas macleodii	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	macleodii	HOT1A3	NA	Daniel Sher	NA	NA
+1	1	7000186747	H	pgall	Pgall	Phaeobacter gallaeciensis	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Phaeobacter	gallaeciensis	none	Roseobacter gallaeciensis	DSMZ	26640	NA
+1	2	7000186748	A	citrea	citrea	Pseudoalteromonas citrea	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	citrea	none	Alteromonas citrea	Joseph Christie-Oleza	NA	DSM 8771 from DSMZ
+1	2	7000186748	B	nubin (*mmb1)	MMB1	Marinomonas mediterranea	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Oceanospirillaceae	Marinomonas	mediterranea	MMB-1	NA	ATCC	700492	NA
+1	2	7000186748	C	shewanella 09217 (*shewden)	Shewden	Shewanella denitrificans	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	denitrificans	OS217	NA	ATCC	BAA-1090	NA
+1	2	7000186748	D	koree	koree	Ponticaulis koreensis	Proteobacteria	Alphaproteobacteria	Caulobacterales	Hyphomonadaceae	Ponticaulis	koreensis	GSW-23	NA	DSMZ	19734	NA
+1	2	7000186748	E	dss3	DSS-3	Ruegeria pomeroyi	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Ruegeria	pomeroyi	DSS-3	Silicibacter pomeroyi	Mary Ann Moran	NA	DSM 15171 from DSMZ
+1	2	7000186748	F	t6c	T6c	Pseudoalteromonas atlantica	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Pseudoalteromonas	atlantica	T6c	Paraglaciecola	ATCC	BAA-1087	NA
+1	2	7000186748	G	pinhibens	Pinhib	Phaeobacter inhibens	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Phaeobacter	inhibens	none	NA	Roberto Kolter	17395	NA
+1	2	7000186748	H	phalo	Phalo	Pelagibacterium halotolerans	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Pelagibacterium	halotolerans	B2	NA	DSMZ	22347	NA
+1	3	7000186762	A	cstat	cstat	Corynebacterium stationis	Actinobacteria	Actinobacteria	Actinomycetales	Corynebacteriaceae	Corynebacterium	stationis	622	Brevibacterium stationis; Achromobacter stationis	DSMZ	20302	NA
+1	3	7000186762	B	serr	serr	Serratia sp.	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Yersiniaceae	Serratia	sp.	SC 11,482	NA	ATCC	39006	NA
+1	3	7000186762	C	fors	fors	Gramella forsetii	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Gramella	forsetii	KT0803	NA	Joseph Christie-Oleza	NA	DSM 17595 from DSMZ
+1	3	7000186762	D	HOT5_C3	HOT5_C3	HOT5_C3	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	HOT5_C3	NA	Daniel Sher	NA	NA
+1	3	7000186762	E	abie	abie	Pseudomonas abietaniphila	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	abietaniphila	BKME-9	NA	DSMZ	17554	NA
+1	3	7000186762	F	26499	26499	Alteromonas mediterranea	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	mediterranea	MED64	NA	DSMZ	26499	NA
+1	3	7000186762	G	eryth	eryth	Rhodococcus erythropolis	Actinobacteria	Actinobacteria	Actinomycetales	Nocardiaceae	Rhodococcus	erythropolis	none	Corynebacterium hydrocarboclastum	NITE	100887	NA
+1	3	7000186762	H	aalgi (*SMS7)	Aalgi	Arenibacter algicola	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Arenibacter	algicola	SMS7	NA	Hans-Peter Grossart	NA	NA
+1	4	7000186757	A	Hot5_E6	HOT5_E6	HOT5_E6	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	HOT5_E6	NA	Daniel Sher	NA	NA
+1	4	7000186757	B	Luc18	luca8	Luca8	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	SMR8	NA	Hans-Peter Grossart	NA	NA
+1	4	7000186757	C	Ksed	Ksed	Kytococcus sedentarius	Actinobacteria	Actinobacteria	Actinomycetales	Dermacoccaceae	Kytococcus	sedentarius	541	Micrococcus sedentarius	DSMZ	20547	NA
+1	4	7000186757	D	Fagr	Fagar	Formosa agariphila	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Formosa	agariphila	KMM 3901	NA	Joseph Christie-Oleza	NA	NA
+1	4	7000186757	E	Roseo	roseo	Roseovarius mucosus	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Roseovarius	mucosus	SMR3	NA	Hans-Peter Grossart	NA	NA
+1	4	7000186757	F	HOTS_F3	HOT5_F3	HOT5_F3	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	HOT5_F3	NA	Daniel Sher	NA	NA
+1	4	7000186757	G	B2china	B2china	Pelagibacterium halotolerans	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Pelagibacterium	halotolerans	B2	NA	Xuewei Xu	NA	NA
+1	4	7000186757	H	azure	azure	Vibrio azureus	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	azureus	LC2-005	NA	DSMZ	23306	NA
+1	5	7000186758	A	atlcs	atlcs	Croceibacter atlanticus	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Croceibacter	atlanticus	HTCC 2559	NA	ATCC	BAA-628	NA
+1	5	7000186758	B	27126	27126	Alteromonas macleodii	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	macleodii	107	NA	ATCC	27126	NA
+1	5	7000186758	C	HOTS_B10	HOT5_B10	HOT5_B10	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	HOT5_B10	NA	Daniel Sher	NA	NA
+1	5	7000186758	D	Parctic	Parctic	Psychromonas arctica	Proteobacteria	Gammaproteobacteria	Alteromonadales	Psychromonadaceae	Psychromonas	arctica	Pull2	NA	DSMZ	14288	NA
+1	5	7000186758	E	crono	crono	Cronobacter universalis	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Cronobacter	universalis	NA	NA	DSMZ	27963	NA
+1	5	7000186758	F	DFL12	DFL-12	Dinoroseobacter shibae	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Dinoroseobacter	shibae	DFL 12	NA	DSMZ	16493	NA
+1	5	7000186758	G	exig	exig	Exiguobacterium oxidotolerans	Firmicutes	Bacilli	Bacillales	Bacilli	Exiguobacterium	oxidotolerans	T-2-2	NA	DSMZ	17272	NA
+1	5	7000186758	H	HPIS (*HP15)	HP15	Marinobacter adhaerens	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Marinobacter	adhaerens	HP15	NA	Daniel Sher	NA	DSM 23420 from DSMZ
+2	6	7000186764	A	MRE600	MRE600	Escherichia coli	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Escherichia	coli	MRE600	NA	ATCC	29417	NA
+2	6	7000186764	B	DEI (*DE1)	DE1	Alteromonas mediterranea	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	mediterranea	DE1	NA	Daniel Sher	NA	NA
+2	6	7000186764	C	PRIRED	PR1red	Algoriphagus machipongonensis	Bacteroidetes	Cytophagia	Cytophagales	Cyclobacteriaceae	Algoriphagus	machipongonensis	PR1	NA	Daniel Sher	NA	DSM 23439 from DSMZ
+2	6	7000186764	D	CPI_Phaloplanktis	CIP	Pseudoalteromonas haloplanktis	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	haloplanktis	CIP 108707	Alteromonas haloplanktis	CIP	108707	NA
+2	6	7000186764	E	blin (*bdim)	bdim	Brevundimonas diminuta	Proteobacteria	Alphaproteobacteria	Rhizobiales	Caulobacteraceae	Brevundimonas	diminuta	PCI 818	Pseudomonas diminuta	ATCC	19146	NA
+2	6	7000186764	F	sflavi (SMR1)	sflavi (SMR1)	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+2	6	7000186764	G	25922	25922	Escherichia coli	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Escherichia	coli	Seattle 1946	NA	ATCC	25922	NA
+2	6	7000186764	H	Fang_HK	fang	Fangia hongkongensis	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Fangia	hongkongensis	UST040201-002	NA	DSMZ	21703	NA
+2	7	7000186759	A	kuro	kuro	Halobacillus kuroshimensis	Firmicutes	Bacilli	Bacillales	Bacillaceae	Halobacillus	kuroshimensis	JS-Hb7	NA	DSMZ	18393	NA
+2	7	7000186759	B	nitzsch	nitzsch	Sulfitobacter pseudonitzschiae	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Sulfitobacter	pseudonitzschiae	SMR1	NA	Hans-Peter Grossart	NA	NA
+2	7	7000186759	C	salex	salex	Haliea salexigens	Proteobacteria	Gammaproteobacteria	Alteromonadales	Halieaceae	Haliea	salexigens	3x/A02/235	NA	DSMZ	19537	NA
+2	7	7000186759	D	PRwhite	PR1white	Algoriphagus machipongonensis	Bacteroidetes	Cytophagia	Cytophagales	Cyclobacteriaceae	Algoriphagus	machipongonensis	PR1	NA	Daniel Sher	NA	DSM 23439 from DSMZ
+2	7	7000186759	E	owen	owen	Owenweeksia hongkongensis	Bacteroidetes	Flavobacteriia	Flavobacteriales	Cryomorphaceae	Owenweeksia	hongkongensis	UST20020801	NA	DSMZ	17368	NA
+2	7	7000186759	F	woodyi	woodyi	Shewanella woodyi	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	woodyi	MS32	NA	ATCC	51908	NA
+2	7	7000186759	G	Rlong (*Relong)	Relong	Roseibacterium elongatum	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Roseibacterium	elongatum	OCh 323	NA	DSMZ	19469	NA
+2	7	7000186759	H	Rsphaer	Rsphaer	Rhodobacter sphaeroides	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	sphaeroides	ATH 2.4.1	Rhodopseudomonas sphaeroides	ATCC	BAA-808	NA
+2	8	7000186765	A	plank	plank	Planktomarina temperata	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Planktomarina	temperata	RCA23	NA	DSMZ	22400	NA
+2	8	7000186765	B	T2	T2	Aeromicrobium marinum	Actinobacteria	Actinobacteria	Actinomycetales	Nocardioidaceae	Aeromicrobium	marinum	T2	NA	Joseph Christie-Oleza	NA	DSM 15272 from DSMZ
+2	8	7000186765	C	HOT5_B8	HOT5_B8	HOT5_B8	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	TBD	HOT5_B8	NA	Daniel Sher	NA	NA
+2	8	7000186765	D	dies	dies	Alcanivorax dieselolei	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Alcanivoracaceae	Alcanivorax	dieselolei	B-5	NA	DSMZ	16502	NA
+2	8	7000186765	E	salin	salin	Salinispora tropica	Actinobacteria	Actinobacteria	Actinomycetales	Micromonosporaceae	Salinispora	tropica	CNB440	Salinospora tropicalis	Daniel Sher	NA	DSM 44818 from DSMZ
+2	8	7000186765	F	sedthio	sedthio	Sedimenticola thiotaurini	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Gammaproteobacteria	Sedimenticola	thiotaurini	SIP-G1	NA	DSMZ	28581	NA
+2	8	7000186765	G	Rbalt	Rbalt	Rhodopirellula baltica	Planctomycetes	Planctomycea	Planctomycetales	Planctomycetaceae	Rhodopirellula	baltica	IFAM 1310	NA	DSMZ	10527	NA
+2	8	7000186765	H	bork	bork	Alcanivorax borkumensis	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Alcanivoracaceae	Alcanivorax	borkumensis	SK2	NA	DSMZ	11573	NA
