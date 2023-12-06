@@ -6,12 +6,67 @@ library(tidyverse)
 library(readxl)
 library(eulerr)
 
-physical_marine_library <- read_tsv("20221101-strain_lib.tsv") %>%
-  mutate(project = 'physical_library') %>%
-  mutate(tmp_id = str_to_lower(Strain_nickname))
+# Loading different metadata tables.
+curated_metadata <- read_xlsx('./20231026-master_metadata_file-curated.xlsx', na = 'NA') %>%
+  rename(strain_designation = `strain designation`) %>%
+  select(ds_strain_id,
+         phylum, class, order, family, genus, species, strain_designation,
+         source = Source, source_catalog_number = `catalog number`,
+         id_RES = sample_name, id_FOR = strain_nickname,
+         RES_sample_number = sample_number,
+         RES_sample_name = sample_name, RES_in_IAMM = in_IAMM,
+         RES_dna_prep = dna_prep, RES_ref_genome = ref_genome)
 
-curated_metadata <- read_xlsx('20231026-master_metadata_file-curated.xlsx')
+marine_library <- read_tsv("./20221101-strain_lib.tsv") %>%
+  select(Location_Column, Location_Box, Location_BoxNo, BoxRow, TubeLabel, Other_Names,
+         Source, Source_catalog_number, Note, Strain_nickname) %>%
+  rename_with(~str_c('LIB_', .x)) %>%
+  mutate(tmp_id = str_to_lower(LIB_Strain_nickname)) %>%
+  rename(id_LIB = LIB_Strain_nickname)
 
+zoccarato22 <- read_xlsx('./zoccarato2022-a_comparative_whole-genome_approach_identfies_bacterial_traits_for_marine_microbial_interactions.xlsx',
+                         sheet = 'Supp_Data_3', skip = 3) %>%
+  fill(GFC) %>%
+  select(ZOC_species = Species, ZOC_filename = Filename, ZOC_GFC = GFC,
+         ZOC_repository = Repository, ZOC_isolation_source = `Isolation source`,
+         ZOC_isolation_notes = `Isolation notes`) %>%
+  mutate(id_ZOC = ZOC_species)
+zoccarato22_map <- zoccarato22 %>% select(ZOC_filename, id_ZOC)
+
+# Merging metadata.
+master_metadata <- curated_metadata %>%
+  full_join(., marine_library,
+            by = c('ds_strain_id' = 'tmp_id')) %>%
+  select(ds_strain_id, starts_with("project"), everything())
+
+master_metadata_zoccarato22 <- zoccarato22_map %>%
+  mutate(genus = str_split_i(id_ZOC, ' ', 1),
+         species = str_split_i(id_ZOC, ' ', 2),
+         strain_designation = str_split_i(id_ZOC, ' ', -1)) %>%
+  left_join(master_metadata, ., by = c('genus', 'species', 'strain_designation')) %>% # map Zoccarato22 by Species
+  mutate(genome_file = str_split_i(RES_ref_genome, '\\.', 1)) %>%
+  left_join(., zoccarato22_map, by = c('genome_file' = 'ZOC_filename')) %>%  # map Zoccarato22 by Reference-file
+  mutate(id_ZOC = if_else(is.na(id_ZOC.x), id_ZOC.y, id_ZOC.x), .keep = 'unused') %>%
+  select(-ZOC_filename, -genome_file)
+
+zoccarato22_manual_map <- read_tsv('20231205-map-metadata_zoccarrato22.tsv')
+all_master_metadata <- zoccarato22_map %>%
+  mutate(id = str_split_i(id_ZOC, ' ', -1)) %>% # map Zoccarato22 by Source ID
+  left_join(master_metadata_zoccarato22, ., by = c('source_catalog_number' = 'id')) %>%
+  mutate(id_ZOC = if_else(is.na(id_ZOC.x), id_ZOC.y, id_ZOC.x), .keep = 'unused') %>%
+  select(-ZOC_filename) %>%
+  left_join(., zoccarato22_manual_map, by = 'ds_strain_id') %>% # map Zoccarato22 by manual curation
+  mutate(id_ZOC = if_else(is.na(id_ZOC.y), id_ZOC.x, id_ZOC.y), .keep = 'unused') %>%
+  left_join(., zoccarato22, by = c('id_ZOC')) %>%
+  select(ds_strain_id, phylum, class, order, family, genus, species,
+         strain_designation, source, source_catalog_number, starts_with('id_'),
+         starts_with('RES_'), starts_with('LIB_'), starts_with('FOR_'), starts_with('ZOC_'),
+         everything() # there shouldn't be any more columns but just to include them.
+         ) %>%
+  write_tsv('all_metadata_file.tsv', na = '')
+
+
+# Helper function.
 clean_project_column <- function(x){
   x <- str_split(x, '/')
   x <- map(x, ~.x[.x != ''])
@@ -19,25 +74,22 @@ clean_project_column <- function(x){
   return(ret)
 }
 
-master_metadata <- curated_metadata %>%
-  full_join(., physical_marine_library, by = c('ds_strain_id' = 'tmp_id')) %>%
-  mutate(project.x = str_replace_na(project.x, ''), project.y = str_replace_na(project.y, ''),
-         project = str_c(project.x, project.y, sep = '/')) %>%
-  select(-project.x, -project.y) %>% mutate(project = clean_project_column(project))%>%
-  select(ds_strain_id, starts_with("project"), everything()) %>%
-  arrange(project) %>%
-  mutate(Source.x = str_replace_na(Source.x, replacement = ''), Source.y = str_replace_na(Source.y, replacement = ''),
-    Source = if_else(Source.x==Source.y,Source.x,str_c(Source.x, Source.y, sep = '&'))) %>%
-  write_tsv('all_metadata_file.tsv')
-
-project_sets <- master_metadata %>% count(project)
+# Euler diagram of Project overlaps.
+project_sets <- 
+  all_master_metadata %>%
+  select(starts_with('id_')) %>%
+  mutate(across(everything(), ~if_else(is.na(.x), '', cur_column()))) %>%
+  rowwise() %>%
+  mutate(x = str_c(c(id_RES, id_FOR, id_LIB, id_ZOC), collapse = '/')) %>%
+  mutate(y = clean_project_column(x)) %>%
+  mutate(project = str_replace_all(y, c('id_RES' = 're-sequencing',
+                               'id_LIB' = 'marine_library',
+                               'id_FOR' = 'forchielli2022',
+                               'id_ZOC' = 'zoccarato2022'))) %>%
+  count(project)
 project_sets <- structure(project_sets$n, names = project_sets$project)
 set.seed(42)
 strain_euler <- euler(project_sets, input = 'disjoint', shape = 'ellipse')
-png('20231027-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
+png('20231206-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
 plot(strain_euler, quantities = TRUE, legend = TRUE)
 dev.off()
-
-zoccarato22 <- read_xlsx('../Zoccarato2022/zoccarato2022-a_comparative_whole-genome_approach_identfies_bacterial_traits_for_marine_microbial_interactions.xlsx', sheet = 'Supp_Data_3', skip = 3)
-
-left_join(curated_metadata, zoccarato22 %>% select(Species, `NCBI taxonID`, `Accession number`, Filename, Repository), by = c('species_name' = 'Species')) %>% View
