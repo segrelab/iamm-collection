@@ -9,6 +9,9 @@ library(eulerr)
 # Loading different metadata tables.
 curated_metadata <- read_xlsx('./20231026-master_metadata_file-curated.xlsx', na = 'NA') %>%
   rename(strain_designation = `strain designation`) %>%
+  mutate(genus = if_else(is.na(genus), str_split_i(species_name, ' ', 1), genus),
+         species = if_else(is.na(species), str_split_i(species_name, ' ', 2), species),
+         strain_designation = if_else(is.na(strain_designation), strain_id, strain_designation)) %>%
   select(ds_strain_id,
          phylum, class, order, family, genus, species, strain_designation,
          source = Source, source_catalog_number = `catalog number`,
@@ -64,7 +67,6 @@ all_master_metadata <- zoccarato22_map %>%
          everything() # there shouldn't be any more columns but just to include them.
          ) %>%
   write_tsv('all_metadata_file.tsv', na = '')
-
 
 # Helper function.
 clean_project_column <- function(x){
