@@ -27,11 +27,11 @@ The following projects have in some way dealt with (some) of the strains:
  - Used [20231130-consolidation_euler.R](./20231130-consolidation_euler.R) to integrate the curated metadata with `LIB` and `ZOC` project's:
    - This used the following metadata files as input:
      - [20231026-master_metadata_file-curated.xlsx](./20231026-master_metadata_file-curated.xlsx)
-     - [20221101-strain_lib.tsv](./20221101-strain_lib.tsv): `LIB` metafile of the marine strain library
-       - created by Konrad, 2022-11-01 using [20221101-metadata_merge.R](./20221101-metadata_merge.R)
+     - [20231213-strain_lib.tsv](./20231213-strain_lib.tsv): `LIB` metafile of the marine strain library
+       - created initially by Konrad, 2022-11-01 using [20221101-metadata_merge.R](./20221101-metadata_merge.R), curated by hand 2023-12-13
      - [zoccarato2022-....xlsx](./zoccarato2022-a_comparative_whole-genome_approach_identfies_bacterial_traits_for_marine_microbial_interactions.xlsx): `ZOC` metadata
      - [20231205-map-metadata_zoccarrato22.tsv](./20231205-map-metadata_zoccarrato22.tsv): file used for manual mapping to `ZOC` metadata after using heuristics (mapping by Species, Reference-file, Source ID)
    - This creates [all_metadata_file.tsv](./all_metadata_file.tsv) and the Euler diagram below
 
-![Euler diagram of strain overlap across projects](./20231206-all_sets-euler.png)
+![Euler diagram of strain overlap across projects](./20231213-all_sets-euler.png)
 

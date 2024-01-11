@@ -20,12 +20,12 @@ curated_metadata <- read_xlsx('./20231026-master_metadata_file-curated.xlsx', na
          RES_sample_name = sample_name, RES_in_IAMM = in_IAMM,
          RES_dna_prep = dna_prep, RES_ref_genome = ref_genome)
 
-marine_library <- read_tsv("./20221101-strain_lib.tsv") %>%
+marine_library <- read_tsv("./20231213-strain_lib.tsv") %>%
   select(Location_Column, Location_Box, Location_BoxNo, BoxRow, TubeLabel, Other_Names,
          Source, Source_catalog_number, Note, Strain_nickname) %>%
   rename_with(~str_c('LIB_', .x)) %>%
   mutate(tmp_id = str_to_lower(LIB_Strain_nickname)) %>%
-  rename(id_LIB = LIB_Strain_nickname)
+  rename(id_LIB = LIB_TubeLabel)
 
 zoccarato22 <- read_xlsx('./zoccarato2022-a_comparative_whole-genome_approach_identfies_bacterial_traits_for_marine_microbial_interactions.xlsx',
                          sheet = 'Supp_Data_3', skip = 3) %>%
@@ -92,6 +92,6 @@ project_sets <-
 project_sets <- structure(project_sets$n, names = project_sets$project)
 set.seed(42)
 strain_euler <- euler(project_sets, input = 'disjoint', shape = 'ellipse')
-png('20231206-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
+png('20231213-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
 plot(strain_euler, quantities = TRUE, legend = TRUE)
 dev.off()
