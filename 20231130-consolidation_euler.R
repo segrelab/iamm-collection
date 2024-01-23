@@ -20,7 +20,7 @@ curated_metadata <- read_xlsx('./20231026-master_metadata_file-curated.xlsx', na
          RES_sample_name = sample_name, RES_in_IAMM = in_IAMM,
          RES_dna_prep = dna_prep, RES_ref_genome = ref_genome)
 
-marine_library <- read_tsv("./20231213-strain_lib.tsv") %>%
+marine_library <- read_tsv("./20240122-strain_lib.tsv") %>%
   select(Location_Column, Location_Box, Location_BoxNo, BoxRow, TubeLabel, Other_Names,
          Source, Source_catalog_number, Note, Strain_nickname) %>%
   rename_with(~str_c('LIB_', .x)) %>%
