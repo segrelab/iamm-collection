@@ -7,7 +7,7 @@ library(readxl)
 library(eulerr)
 
 # Loading different metadata tables.
-curated_metadata <- read_xlsx('./20231026-master_metadata_file-curated.xlsx', na = 'NA') %>%
+curated_metadata <- read_xlsx('./20240123-master_metadata_file-curated.xlsx', na = 'NA') %>%
   rename(strain_designation = `strain designation`) %>%
   mutate(genus = if_else(is.na(genus), str_split_i(species_name, ' ', 1), genus),
          species = if_else(is.na(species), str_split_i(species_name, ' ', 2), species),
@@ -66,7 +66,7 @@ all_master_metadata <- zoccarato22_map %>%
          starts_with('RES_'), starts_with('LIB_'), starts_with('FOR_'), starts_with('ZOC_'),
          everything() # there shouldn't be any more columns but just to include them.
          ) %>%
-  write_tsv(str_c(format(Sys.Date(), "%Y%m%d"), '-all_metadata_file.tsv'), na = '')
+  write_tsv(str_c(format(Sys.Date(), "%Y%m%d"), '-IAMM_metadata_file.tsv'), na = '')
 
 # Helper function.
 clean_project_column <- function(x){

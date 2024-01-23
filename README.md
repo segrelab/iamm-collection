@@ -21,7 +21,7 @@ The following projects have in some way dealt with (some) of the strains:
  - Used [metadata_merge.R](./metadata_merge.R) to merge and unify strain metadata of `RES` and `FOR` projects.
    - This used the following metadata files as input:
      - [metafile.csv](./metafile.csv): initial metafile of the `RES` project
-     - [strain_tax copy.xlsx](./strain_tax copy.xlsx): `FOR` metadata
+     - [forchielli2022-....xlsx](./forchielli2022-metabolic_phenotyping_of_marine_heterotrophs_on_refactored_media_reveals_diverse_metabolic_adaptations_and_lifestyle_strategies-ST1.xlsx): `FOR` metadata
    - This created `master_metadata_file.tsv`
  - The metadata from projects `FOR` and `RES` in file `master_metadata_file.tsv` where manually combined, curated and integrated resulting in [20231026-master_metadata_file-curated.xlsx](./20231026-master_metadata_file-curated.xlsx).
  - Used [consolidation_euler.R](./consolidation_euler.R) to integrate the curated metadata with `LIB` and `ZOC` project's:
@@ -34,5 +34,5 @@ The following projects have in some way dealt with (some) of the strains:
    - This creates a dated version of [IAMM_metadata_file.tsv](./IAMM_metadata_file.tsv) and the Euler diagram below.
  - Since [IAMM_metadata_file.tsv](./IAMM_metadata_file.tsv) was initially copied/renamed from its dated version produced by the above process and also put under version control. Further changes need to be carefully curated and committed.
 
-![Euler diagram of strain overlap across projects](./20231213-all_sets-euler.png)
+![Euler diagram of strain overlap across projects](./20240123-all_sets-euler.png)
 
