@@ -100,4 +100,4 @@ nitzsch	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Sulf
 nitzsch/luca1					Sulfitobacter	pseudonitzschiae	Luca1			D20-160070-4500T				70	D20-160070-4500T	Same as nitzsch?	Nitsch	GCF_002222635.1_ASM222263v1_genomic.fna.gz															
 azure	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	azureus	LC2-005	DSMZ	23306	D20-160059-4500T	azure	azure	Vibrio azureus NBRC 104587	59	D20-160059-4500T	Y	Azure	2600255073.fna	1	4	7000186757	H		DSMZ	23306		azure	Vibrio azureus NBRC 104587	2600255073	25	JGI	SW	marine, https://academic.oup.com/femsle/article/329/1/61/627402
 vnat	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	natriegens	111	ATCC	14048	D20-160046-4500T	vnat	vnat		46	D20-160046-4500T	Y	Vnat	GCF_001456255.1_ASM145625v1_genomic.fna.gz	1	1	7000186747	C	Beneckea natriegens	ATCC	14048		vnat						
-sflavi-2												sflavi_SMR1							2	6	7000186764	F				same as ""Sflavi"" based on 16S sequencing (2023-12-13, KH)	sflavi-2						
+sflavi-2												sflavi_SMR1							2	6	7000186764	F				same as 'Sflavi' based on 16S sequencing (2023-12-13, KH)	sflavi-2						

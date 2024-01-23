@@ -44,7 +44,7 @@ Location_Column	Location_Box	Location_BoxNo	BoxRow	TubeLabel	Strain_nickname	Nam
 2	6	7000186764	C	PRIRED	PR1red	Algoriphagus machipongonensis	Bacteroidetes	Cytophagia	Cytophagales	Cyclobacteriaceae	Algoriphagus	machipongonensis	PR1	NA	Daniel Sher	NA	DSM 23439 from DSMZ
 2	6	7000186764	D	CPI_Phaloplanktis	CIP	Pseudoalteromonas haloplanktis	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	haloplanktis	CIP 108707	Alteromonas haloplanktis	CIP	108707	NA
 2	6	7000186764	E	blin	bdim	Brevundimonas diminuta	Proteobacteria	Alphaproteobacteria	Rhizobiales	Caulobacteraceae	Brevundimonas	diminuta	PCI 818	Pseudomonas diminuta	ATCC	19146	NA
-2	6	7000186764	F	sflavi_SMR1	sflavi-2	Sphingorhabdus flavimaris	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Parasphingorhabdus	flavimaris	NA	NA	NA	NA	"same as ""Sflavi"" based on 16S sequencing (2023-12-13, KH)"
+2	6	7000186764	F	sflavi_SMR1	sflavi-2	Sphingorhabdus flavimaris	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Parasphingorhabdus	flavimaris	NA	NA	NA	NA	"same as 'Sflavi' based on 16S sequencing (2023-12-13, KH)"
 2	6	7000186764	G	25922	25922	Escherichia coli	Proteobacteria	Gammaproteobacteria	Enterobacteriales	Enterobacteriaceae	Escherichia	coli	Seattle 1946	NA	ATCC	25922	NA
 2	6	7000186764	H	Fang_HK	fang	Fangia hongkongensis	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Fangia	hongkongensis	UST040201-002	NA	DSMZ	21703	NA
 2	7	7000186759	A	kuro	kuro	Halobacillus kuroshimensis	Firmicutes	Bacilli	Bacillales	Bacillaceae	Halobacillus	kuroshimensis	JS-Hb7	NA	DSMZ	18393	NA
