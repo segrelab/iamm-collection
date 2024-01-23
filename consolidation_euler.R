@@ -66,7 +66,7 @@ all_master_metadata <- zoccarato22_map %>%
          starts_with('RES_'), starts_with('LIB_'), starts_with('FOR_'), starts_with('ZOC_'),
          everything() # there shouldn't be any more columns but just to include them.
          ) %>%
-  write_tsv('all_metadata_file.tsv', na = '')
+  write_tsv(str_c(format(Sys.Date(), "%Y%m%d"), '-all_metadata_file.tsv'), na = '')
 
 # Helper function.
 clean_project_column <- function(x){
