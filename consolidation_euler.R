@@ -92,6 +92,6 @@ project_sets <-
 project_sets <- structure(project_sets$n, names = project_sets$project)
 set.seed(42)
 strain_euler <- euler(project_sets, input = 'disjoint', shape = 'ellipse')
-png('20231213-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
+png('20240123-all_sets-euler.png', width = 6, height = 5, res = 300, units = 'in')
 plot(strain_euler, quantities = TRUE, legend = TRUE)
 dev.off()
