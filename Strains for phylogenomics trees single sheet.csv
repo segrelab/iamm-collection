@@ -26,13 +26,13 @@ fagar,Formosa agariphila,HG315671.fna,Y,Y,Y,Y
 fang,Fangia hongkongensis,2515154119.fna,Y,Y,Y,Y
 fors,Gramella forsetii,GCA_000060345.fna,Y,Y,Y,Y
 hot1a3,Alteromonas macleodii,2687453488.fna,Y,Y,Y,Y
-hot5_b10,Marinovum algicola HOT5B10,B10.fna,Y,Y,Y,Y
-hot5_b8,Roseovarius sp HOT5_B8,B08.fna,Y,Y,Y,Y
-hot5_c3,Roseovarius sp HOT5_C3,C03.fna,Y,Y,Y,Y
-hot5_e6,Marinovum algicola HOT5_E6,E06.fna,Y,Y,Y,Y
-hot5_f3,Marinovum algicola HOT5_F3,F03.fna,Y,Y,Y,Y
+hot5_b10,Marinovum algicola HOT5B10,HOT_B10.fna,Y,Y,Y,Y
+hot5_b8,Roseovarius sp HOT5_B8,HOT_B08.fna,Y,Y,Y,Y
+hot5_c3,Roseovarius sp HOT5_C3,HOT_C03.fna,Y,Y,Y,Y
+hot5_e6,Marinovum algicola HOT5_E6,HOT_E06.fna,Y,Y,Y,Y
+hot5_f3,Marinovum algicola HOT5_F3,HOT_F03.fna,Y,Y,Y,Y
 hp15,Marinobacter adhaerens,650377991.fna,Y,Y,Y,Y
-jeju,Hyunsoonleella jejuensis CNU-004,2684622907,Y,Y,Y,Y
+jeju,Hyunsoonleella jejuensis CNU-004,2684622907.fna,Y,Y,Y,Y
 kordia,Kordia algicida,GCF_000154725.1_ASM15472v1_genomic.fna.gz,Y,Y,Y,Y
 koree,Ponticaulis koreensis,2524614539.fna,Y,Y,Y,Y
 ksed,Kytococcus sedentarius,644736380.fna,Y,Y,Y,Y
