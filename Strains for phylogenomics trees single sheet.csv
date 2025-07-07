@@ -1,0 +1,70 @@
+﻿new strain ID,Library name,Oct2024_ref_genome,in_67_strains,in_65_strains,in_68_strains,in_69_strains
+aalgi,Arenibacter algicola,Arenibacter_algicola_SMS7.fna,Y,Y,Y,Y
+abie,Pseudomonas abietaniphila,2667527211.fna,Y,Y,Y,Y
+atcc25922,Escherichia coli,GCF_000401755.1_Escherichia_coli_ATCC_25922_genomic.fna,Y,Y,Y,Y
+atcc26499,Alteromonas mediterranea,2545824627.fna,Y,Y,Y,Y
+atcc27126,Alteromonas macleodii,GCA_000172635.fna,Y,Y,Y,Y
+atlcs,Croceibacter atlanticus,2526164557.fna,Y,Y,Y,Y
+azure,Vibrio azureus,2600255073.fna,Y,Y,Y,Y
+b2china,Pelagibacterium halotolerans,GCA_000230555.fna,Y,Y,Y,Y
+bdim,Brevundimonas diminuta,GCF_004102925.1_ASM410292v1_genomic.fna,Y,Y,Y,Y
+bermu,Pelagibaca bermudensis,GCF_000153725.1_ASM15372v1_genomic.fna,Y,Y,Y,Y
+bork,Alcanivorax borkumensis,GCA_000009365.fna,Y,Y,Y,Y
+bs11,Alteromonas macleodii,GCA_000299995.fna,Y,Y,Y,Y
+cip,Pseudoalteromonas haloplanktis,GCA_000026085.fna,Y,Y,Y,Y
+citrea,Pseudoalteromonas citrea,GCF_000238375.3_ASM23837v4_genomic.fna,N,N,Y,Y
+crono,Cronobacter universalis,2667527511.fna,Y,Y,Y,Y
+cstat,Corynebacterium stationis,2623620535.fna,Y,Y,Y,Y
+de,Alteromonas mediterranea,GCA_000020585.fna,Y,Y,Y,Y
+de1,Alteromonas mediterranea,GCF_000310085.1_ASM31008v1_genomic.fna,Y,Y,Y,Y
+dfl-12,Dinoroseobacter shibae,GCA_000018145.fna,Y,Y,Y,Y
+dies,Alcanivorax dieselolei,GCA_000300005.fna,Y,Y,Y,Y
+dss-3,Ruegeria pomeroyi,GCA_000011965.fna,Y,Y,Y,Y
+eryth,Rhodococcus erythropolis,GCA_000010105.fna,Y,Y,Y,Y
+exig,Exiguobacterium oxidotolerans,2562617200.fna,Y,Y,Y,Y
+fagar,Formosa agariphila,HG315671.fna,Y,Y,Y,Y
+fang,Fangia hongkongensis,2515154119.fna,Y,Y,Y,Y
+fors,Gramella forsetii,GCA_000060345.fna,Y,Y,Y,Y
+hot1a3,Alteromonas macleodii,2687453488.fna,Y,Y,Y,Y
+hot5_b10,Marinovum algicola HOT5B10,HOT5_B10.fna,Y,Y,Y,Y
+hot5_b8,Roseovarius sp HOT5_B8,HOT5_B08.fna,Y,Y,Y,Y
+hot5_c3,Roseovarius sp HOT5_C3,HOT5_C03.fna,Y,Y,Y,Y
+hot5_e6,Marinovum algicola HOT5_E6,HOT5_E06.fna,Y,Y,Y,Y
+hot5_f3,Marinovum algicola HOT5_F3,HOT5_F03.fna,Y,Y,Y,Y
+hp15,Marinobacter adhaerens,650377991.fna,Y,Y,Y,Y
+jeju,Hyunsoonleella jejuensis CNU-004,2684622907.fna,Y,Y,Y,Y
+kordia,Kordia algicida,GCF_000154725.1_ASM15472v1_genomic.fna,Y,Y,Y,Y
+koree,Ponticaulis koreensis,2524614539.fna,Y,Y,Y,Y
+ksed,Kytococcus sedentarius,644736380.fna,Y,Y,Y,Y
+kuro,Halobacillus kuroshimensis,2523533634.fna,Y,Y,Y,Y
+luca8,Luca8,Sulfitobacter_pseudonitzschiae_SMR1.fna,Y,Y,Y,Y
+mmb1,Marinomonas mediterranea,2506210002.fna,Y,Y,Y,Y
+mr1,Shewanella oneidensis MR-1,GCF_000146165.2_ASM14616v2_genomic.fna,Y,Y,Y,Y
+mre600,Escherichia coli,2622736468.fna,Y,Y,Y,Y
+nitzsch,Sulfitobacter pseudonitzschiae,Sulfitobacter_pseudonitzschiae_SMR1.fna,Y,Y,Y,Y
+och114,Roseobacter denitrificans,GCF_000014045.1_ASM1404v1_genomic.fna,N,N,N,Y
+owen,Owenweeksia hongkongensis,2508501098.fna,Y,Y,Y,Y
+parctic,Psychromonas arctica,GCF_000482725.1_ASM48272v1_genomic.fna,Y,Y,Y,Y
+pgall,Phaeobacter gallaeciensis,GCA_000511385.fna,Y,Y,Y,Y
+phalo,Pelagibacterium halotolerans,GCA_000230555.fna,Y,Y,Y,Y
+pinhib,Phaeobacter inhibens,GCA_000154765.fna,Y,Y,Y,Y
+plank,Planktomarina temperata RCA23,2548877138.fna,Y,Y,Y,Y
+pr1red,Algoriphagus machipongonensis,GCF_000166275.1_ASM16627v1_genomic.fna,Y,Y,Y,Y
+psych,Psychromonas ossibalaenae JAMM 0738,GCF_000381745.1_ASM38174v1_genomic.fna,Y,Y,Y,Y
+rbalt,Rhodopirellula baltica,637000236.fna,Y,Y,Y,Y
+relong,Roseibacterium elongatum,GCF_000590925.1_ASM59092v1_genomic.fna,Y,N,Y,Y
+roseo,Roseovarius mucosus,Roseovarius_mucosus_SMR3.fna,Y,Y,Y,Y
+rsphaer,Rhodobacter sphaeroides,GCF_000012905.2_ASM1290v2_genomic.fna,Y,N,Y,Y
+salex,Haliea salexigens,2523533559.fna,Y,Y,Y,Y
+salin,Salinispora tropica,2518645624.fna,Y,Y,Y,Y
+sedthio,Sedimenticola thiotaurini,2609459601.fna,Y,Y,Y,Y
+serr,Serratia sp.,2526164535.fna,Y,Y,Y,Y
+sflavi,Sphingorhabdus flavimaris,Sphingorhabdus_flavimaris_SMR4y.fna,Y,Y,Y,Y
+shewden,Shewanella denitrificans,2524023135.fna,Y,Y,Y,Y
+simid,Simiduia agarivorans,2519103097.fna,Y,Y,Y,Y
+t2,Aeromicrobium marinum,GCF_000160775.2_ASM16077v2_genomic.fna,Y,Y,Y,Y
+t6c,Pseudoalteromonas atlantica,2606217322.fna,Y,Y,Y,Y
+vcamp,Vibrio campbelli,GCA_000464435.fna,Y,Y,Y,Y
+vnat,Vibrio natriegens,GCF_001456255.1_ASM145625v1_genomic.fna,Y,Y,Y,Y
+vorax,Pseudobacteriovorax antillogorgiicola,GCF_004346105.1_ASM434610v1_genomic.fna,Y,Y,Y,Y
+woodyi,Shewanella woodyi,GCA_000019525.fna,Y,Y,Y,Y
