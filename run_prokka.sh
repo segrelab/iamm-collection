@@ -7,7 +7,8 @@
 #$ -pe omp 8                        # Request multiple slots for the Shared Memory application (OpenMP)
 
 # Load the required modules
-module load prokka  # To use Prokka for genome annotation
+module load perl/5.28.1  # Dependency for Prokka
+module load prokka/1.14.5  # To use Prokka for genome annotation
 module load parallel  # To use GNU parallel for running multiple jobs in parallel
 
 # Create a temporary file to store commands for parallel execution
