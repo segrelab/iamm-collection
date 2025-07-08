@@ -4,7 +4,7 @@
 #$ -o run_prokka.$JOB_ID.out        # Specify the output file
 #$ -P hfsp                          # Specify the SCC project name you want to use
 #$ -N prokka                        # Give your job a name
-#$ -pe omp 8                        # Request multiple slots for the Shared Memory application (OpenMP)
+#$ -pe omp 32                       # Request multiple slots for the Shared Memory application (OpenMP)
 
 # Load the required modules
 module load perl/5.28.1  # Dependency for Prokka
@@ -16,7 +16,7 @@ commands_file=$(mktemp)
 
 # --- Configuration ---
 # Full path to your CSV file
-CSV_FILE="/projectnb/hfsp/iamm-collection/Strains for phylogenomics trees single sheet.csv"
+CSV_FILE="/projectnb/hfsp/iamm-collection/iamm_references.csv"
 
 # Directory where your input .fna genome files are located
 GENOMES_DIR="/projectnb/hfsp/IAMM_reference_files/fasta"
@@ -29,9 +29,9 @@ PROKKA_PARENT_DIR="/projectnb/hfsp/IAMM_reference_files/prokka_results"
 mkdir -p "$PROKKA_PARENT_DIR"
 
 # Read the CSV, skip the header line with tail
-tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id _ genome_filename _; do
+tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id genome_filename; do
     # Clean up whitespace from the filename
-    genome_filename=$(echo "$genome_filename" | xargs)
+    prefix=$(echo "$genome_filename" | xargs)
 
     # Skip if the genome filename is empty
     if [ -z "$genome_filename" ]; then
@@ -40,16 +40,13 @@ tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id _ genome_filename _; do
     fi
 
     # Define the full path to the input genome
-    input_fna="$GENOMES_DIR/$genome_filename"
+    input_fna="$GENOMES_DIR/$genome_filename.fna"
 
     # Check if the input file actually exists before running
     if [ ! -f "$input_fna" ]; then
         echo "Warning: Input file not found for strain $strain_id. Expected at: $input_fna"
         continue
     fi
-
-    # Set the prefix (filename without .fna)
-    prefix=$(basename "$genome_filename" .fna)
 
     # Set the specific output directory for this sample
     output_dir="$PROKKA_PARENT_DIR/$prefix"
