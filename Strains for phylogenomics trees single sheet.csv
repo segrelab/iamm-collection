@@ -1,4 +1,4 @@
-﻿new strain ID,Library name,Oct2024_ref_genome,in_67_strains,in_65_strains,in_68_strains,in_69_strains
+﻿strain_id,Library name,ref_genome_name,in_67_strains,in_65_strains,in_68_strains,in_69_strains
 aalgi,Arenibacter algicola,Arenibacter_algicola_SMS7.fna,Y,Y,Y,Y
 abie,Pseudomonas abietaniphila,2667527211.fna,Y,Y,Y,Y
 atcc25922,Escherichia coli,GCF_000401755.1_Escherichia_coli_ATCC_25922_genomic.fna,Y,Y,Y,Y
