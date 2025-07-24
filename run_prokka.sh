@@ -62,7 +62,7 @@ tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id genome_filename; do
     fi
 
     # Run the prokka command
-    echo "prokka --outdir \"$output_dir\" --prefix \"$prefix\" --addgenes \"$input_fna\"" >> "$commands_file"
+    echo "prokka --outdir \"$output_dir\" --prefix \"$prefix\" --compliant \"$input_fna\"" >> "$commands_file"
 
 done
 
