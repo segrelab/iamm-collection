@@ -66,7 +66,7 @@ tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id genome_filename; do
 
 done
 
-# Run all commands in parallel using 8 cores
+# Run all commands in parallel using 32 cores
 parallel -j 32 < "$commands_file"  # Match the number of cores requested at the top of the script
 
 # Clean up
