@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#$ -l h_rt=75:00:00                 # Specify the hard time limit for the job
+#$ -l h_rt=0:60:00                 # Specify the hard time limit for the job
 #$ -j y                             # Merge the error and output streams into a single file
 #$ -o run_prokka.$JOB_ID.out        # Specify the output file
 #$ -P hfsp                          # Specify the SCC project name you want to use
@@ -10,6 +10,9 @@
 module load perl/5.28.1  # Dependency for Prokka
 module load prokka/1.14.5  # To use Prokka for genome annotation
 module load parallel  # To use GNU parallel for running multiple jobs in parallel
+
+# Set a force rerun option, to regenerate a file if it already exists
+force_rerun=false
 
 # Create a temporary file to store commands for parallel execution
 commands_file=$(mktemp)
@@ -51,13 +54,20 @@ tail -n +2 "$CSV_FILE" | while IFS=, read -r strain_id genome_filename; do
     # Set the specific output directory for this sample
     output_dir="$PROKKA_PARENT_DIR/$prefix"
 
+    # Check if the genbank output file already exists
+    genbank_output="$output_dir/$prefix.gbk"
+    if [ -f "$genbank_output" ] && [ "$force_rerun" = false ]; then
+        echo "Skipping $prefix becuause $genbank_output as already exists."
+        continue
+    fi
+
     # Run the prokka command
     echo "prokka --outdir \"$output_dir\" --prefix \"$prefix\" --addgenes \"$input_fna\"" >> "$commands_file"
 
 done
 
 # Run all commands in parallel using 8 cores
-parallel -j 8 < "$commands_file"  # Match the number of cores requested at the top of the script
+parallel -j 32 < "$commands_file"  # Match the number of cores requested at the top of the script
 
 # Clean up
 rm "$commands_file"
