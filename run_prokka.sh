@@ -12,7 +12,7 @@ module load prokka/1.14.5  # To use Prokka for genome annotation
 module load parallel  # To use GNU parallel for running multiple jobs in parallel
 
 # Set a force rerun option, to regenerate a file if it already exists
-force_rerun=false
+force_rerun=true
 
 # Create a temporary file to store commands for parallel execution
 commands_file=$(mktemp)
