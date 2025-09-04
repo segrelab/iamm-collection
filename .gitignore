@@ -2,3 +2,5 @@
 ~$*
 # Ignore ouut files
 *.out
+
+.venv
