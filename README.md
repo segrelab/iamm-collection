@@ -1,5 +1,6 @@
 # iamm-collection
-This repo is used to consolidate various metadata related to a large portion of the Segrè lab's microbial strains. The majority of this work originated from the HFSP collaboration *Interactions Among Marine Microbes* (IAMM).
+
+This repository is used to consolidate various metadata related to a large portion of the Segrè lab's microbial strains. The majority of this work originated from the HFSP collaboration *Interactions Among Marine Microbes* (IAMM).
 
 ## Metadata Structure
 
@@ -12,8 +13,11 @@ Each metadata CSV file contains a `strain_id` column, which should be held consi
 
 What to do with scripts like `shorten_serr_contig_names.sh`? Or my `taxonomy.ipynb` notebook?
 
-Do we want to have a script that enforces ID consistency across files? Pre-commit hook? Github Action post-commit?
+## Working with metadata on the SCC
+
+The SCC provides a [`csvtk`](https://github.com/shenwei356/csvtk) module with many convenience methods for working with CSV files, including translation to and from CSV format to other formats. The `join` command can be used to merge metadata files on the `strain_id` column, e.g. if both reference genome and taxonomic information is needed, with options for outer and inner joins to account for differences in metadata availability.
 
 ## Archive
+
 This repository underwent a reorganization in Fall 2025. The former version of this repository can be viewed at https://github.com/segrelab/iamm-collection/tree/c4ff0893aea35950f1a9f35157504556d10b6a44.
 
