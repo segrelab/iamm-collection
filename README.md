@@ -1,38 +1,19 @@
 # iamm-collection
 This repo is used to consolidate various metadata related to a large portion of the Segrè lab's microbial strains. The majority of this work originated from the HFSP collaboration *Interactions Among Marine Microbes* (IAMM).
 
-The result is a [master metadata file](IAMM_metadata_file.tsv) which should be used as primary point of information on any of the strains covered.
+## Metadata Structure
 
-## Master Metadata File Column Structure
- - `ds_strain_id`: This is the unique strain identifier across projects. It stands for "Daniel Segrè lab strain identifier" **This ID must be used for all work related to these strains for consistencies.**
- - `phylum`, `class`, ..., `strain_designation`: Names of Strain at various taxonomic levels
- - `source`, `source_catalog_number`: Where we got the strain from.
- - `id_...`: Project-specific identifiers. See below for specific labels. This value together with the value of column `ds_strain_id` can serve to map between different projects. In addition, presence of a value in these columns indicates that this strain is being used in a particular project.
- - `RES_...`, `LIB_...`, `ZOC_...`: Project-specific metadata, included for convenience. See below for specific labels. 
+Each metadata CSV file contains a `strain_id` column, which should be held consistent across files. Metadata files are compartmentalized for individual purposes, to enable easier, safer updating. New types of metadata should be added as new files in the same format, rather than modifying existing files. Additionally, filenames should not contain dates, as Git can be used to revisit or revert to previous versions if needed.
 
-## Involved Projects
-The following projects have in some way dealt with (some) of the strains:
- - `re-sequencing`/`RES`: Re-sequencing of bacteria retrieved from various sources to investigate genome variation.
- - `marine_library`/`LIB`: The Segrè lab library of marine microbial strains covering a wide range of (potential interaction) traits based on _in silico_ analysis by Zoccerato _et al._ (`ZOC`). This is a physical strain library which is in our -80 °C.
- - `forchielli22`/`FOR`: Phenotyping of marine bacteria on single carbon sources. DOI: <https://doi.org/10.1128/msystems.00070-22>
- - `zoccarato22`/`ZOC`: An _in silicon_ study across 473 to identify genome functional clusters (GFCs) grouping strains with similar traits (potentially involved in microbial interactions). DOI: <https://doi.org/10.1038/s42003-022-03184-4>
+- [`iamm_references.csv`](iamm_references.csv) contains reference genome names, to easily access fasta files, GenBank annotations, etc.
+- [`iamm_taxonomy.csv`](iamm_taxonomy.csv) contains taxonomic identity for each strain, broken down by level.
 
-## Consolidation Process
- - Used [metadata_merge.R](./metadata_merge.R) to merge and unify strain metadata of `RES` and `FOR` projects.
-   - This used the following metadata files as input:
-     - [metafile.csv](./metafile.csv): initial metafile of the `RES` project
-     - [forchielli2022-....xlsx](./forchielli2022-metabolic_phenotyping_of_marine_heterotrophs_on_refactored_media_reveals_diverse_metabolic_adaptations_and_lifestyle_strategies-ST1.xlsx): `FOR` metadata
-   - This created `master_metadata_file.tsv`
- - The metadata from projects `FOR` and `RES` in file `master_metadata_file.tsv` where manually combined, curated and integrated resulting in [20231026-master_metadata_file-curated.xlsx](./20231026-master_metadata_file-curated.xlsx).
- - Used [consolidation_euler.R](./consolidation_euler.R) to integrate the curated metadata with `LIB` and `ZOC` project's:
-   - This used the following metadata files as input:
-     - [20231026-master_metadata_file-curated.xlsx](./20231026-master_metadata_file-curated.xlsx)
-     - [20240122-strain_lib.tsv](./20240122-strain_lib.tsv): `LIB` metafile of the marine strain library
-       - created initially by Konrad, 2022-11-01 using [20221101-metadata_merge.R](./20221101-metadata_merge.R), curated by hand 2023-12-13 and 2024-01-22
-     - [zoccarato2022-....xlsx](./zoccarato2022-a_comparative_whole-genome_approach_identfies_bacterial_traits_for_marine_microbial_interactions.xlsx): `ZOC` metadata
-     - [20231205-map-metadata_zoccarrato22.tsv](./20231205-map-metadata_zoccarrato22.tsv): file used for manual mapping to `ZOC` metadata after using heuristics (mapping by Species, Reference-file, Source ID)
-   - This creates a dated version of [IAMM_metadata_file.tsv](./IAMM_metadata_file.tsv) and the Euler diagram below.
- - Since [IAMM_metadata_file.tsv](./IAMM_metadata_file.tsv) was initially copied/renamed from its dated version produced by the above process and also put under version control. Further changes need to be carefully curated and committed.
+## Scripts
 
-![Euler diagram of strain overlap across projects](./20240123-all_sets-euler.png)
+What to do with scripts like `shorten_serr_contig_names.sh`? Or my `taxonomy.ipynb` notebook?
+
+Do we want to have a script that enforces ID consistency across files? Pre-commit hook? Github Action post-commit?
+
+## Archive
+This repository underwent a reorganization in Fall 2025. The former version of this repository can be viewed at https://github.com/segrelab/iamm-collection/tree/c4ff0893aea35950f1a9f35157504556d10b6a44.
 
