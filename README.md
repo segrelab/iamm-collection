@@ -11,7 +11,7 @@ Each metadata CSV file contains a `strain_id` column, which should be held consi
 
 ## Scripts
 
-What to do with scripts like `shorten_serr_contig_names.sh`? Or my `taxonomy.ipynb` notebook?
+Scripts used in generating, updating, or checking validity of metadata files can be found in the [`scripts`](scripts) directory.
 
 ## Working with metadata on the SCC
 
